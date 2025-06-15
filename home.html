@@ -88,12 +88,38 @@
                     <img src="./img.jpg" alt="img" >
                     </a>
                 </div>
-            
-                
-               
+
             </div>
 
         </div>
     </div>
+    <script>
+        fetch("https://webbook-backend-api-s.onrender.com/api/v1/book/all")
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data.books)
+            showbook(data.books)
+        })
+        .catch(error=>{
+            console.error("Error fetching data:", error)
+        })
+
+        function showbook(books){
+            const container = document.getElementById("content")
+            container.innerHTML = ""
+
+            books.forEach((element)=>{
+                const card = document.createElement("div")
+                card.id = "card"
+                card.innerHTML = `
+                <a href="${element.source}">
+                    <img src="${element.bookcover.url}" alt="img" >
+                    </a>
+                `
+                container.appendChild(card)
+            });
+        }
+
+    </script>
 </body>
 </html>
