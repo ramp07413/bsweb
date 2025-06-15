@@ -86,7 +86,7 @@ nav li a{
     display: flex;
     justify-content:center;
     flex-wrap: wrap;
-    align-items: center;
+    /* align-items: center; */
     overflow-y: scroll;
     gap: 30px;
     scrollbar-width: none;
@@ -97,12 +97,38 @@ nav li a{
     height: 350px;
     /* background-color: pink; */
     border-radius: 4px;
+    position: relative;
 }
 
 #card img{
     width: 100%;
     height: 100%;
+    border-radius: 4px;
     object-fit: cover;
+
+}
+
+#card p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: hsl(0, 0%, 100%);
+    font-size: 21px;
+    width: 100%;
+    text-align: center;
+}
+
+#card::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur;
+    background-color: #0b0d1156;
 }
 
 footer{
@@ -158,7 +184,7 @@ footer{
     }
 
     .mob i{
-        font-size: 25px;
+        font-size: 20px;
     }
 
     #content{
@@ -169,4 +195,11 @@ footer{
     #search{
         display: none;
     }
+
+    #card{
+    width: 152.5px;
+    height: 250px;
+    /* background-color: pink; */
+    border-radius: 4px;
+}
 }
