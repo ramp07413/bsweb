@@ -5,13 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Telx</title>
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 </head>
 <body>
     <div id="main">
         <div id="mainContainer">
             <nav>
-                <li><a href="#">home</a></li>
-                <li><a href="#">Serial</a></li>
+                <div id="navl">
+                    <div class="desk">
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">Serial</a></li>
+                    </div>
+                    <div class="mob">
+                        <li><a href="#content"><i class="fa-solid fa-house"></i></a></li>
+                        <li><a href="#content"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                        <li><a href="#content"><i class="fa-solid fa-circle-info"></i></a></li>
+                    </div>
+                    
+                </div>
                 <div id="search">
                     <input type="text" placeholder="search">
                 </div>
@@ -91,8 +103,13 @@
 
             </div>
 
+            
         </div>
+       
     </div>
+     <footer>
+                    <p>&copyCopyright by bjsodha 👿 </p>
+            </footer>
     <script>
         fetch("https://webbook-backend-api-s.onrender.com/api/v1/book/all")
         .then(res=>res.json())

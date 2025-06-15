@@ -21,11 +21,17 @@ a{
 #main{
     width: 100%;
     height: 100%;
-    /* background-color: red; */
+    background-color: #162032;
     display: flex;
     justify-content: center;
 }
-
+.desk{
+     display: flex;
+     gap: 50px;
+}
+.mob{
+    display: none;
+}
 
 
 
@@ -47,7 +53,7 @@ nav{
     align-items: center;
     justify-content: flex-end;
     padding-right: 80px;
-    background-color: white;
+    background-color: #162032;
     gap: 50px;
     text-transform: capitalize;
     font-size: 18px;
@@ -55,13 +61,20 @@ nav{
 }
 
 nav li a{
-    color: black;
+    color: #fff;
+}
+
+#navl{
+    display: flex;
+    gap: 50px;
 }
 
 
 #search input{
     padding: 8px;
     border-radius: 20px;
+    border: none;
+    outline: none;
 }
 
 #content{
@@ -80,8 +93,8 @@ nav li a{
 }
 
 #card{
-    width: 250px;
-    height: 400px;
+    width: 230px;
+    height: 350px;
     /* background-color: pink; */
     border-radius: 4px;
 }
@@ -90,4 +103,70 @@ nav li a{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+footer{
+    width: 100%;
+    height: 10%;
+    background-color: #162032;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+@media (max-width: 619px){
+    #main{
+        /* background-color:  red; */
+        /* padding-bottom: 40px; */
+    }
+    #mainContainer{
+        width: 100%;
+        padding-bottom: 40px;
+    }
+    footer{
+        display: none;
+    }
+    nav{
+        height: 10%;
+        position: absolute;
+        bottom: 0;
+        background-color: #162032;
+        width: 100%;
+        padding: 0;
+        display: block;
+        color: #fff;
+        gap: 0;
+    }
+
+    #navl{
+        height: 100%;
+        width: 100%;
+    }
+
+   
+    #navl .desk{
+        display: none;
+    }
+    .mob{
+        display: flex;
+        gap: 50px;
+        height: 100%;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .mob i{
+        font-size: 25px;
+    }
+
+    #content{
+        padding-top: 0;
+    }
+
+
+    #search{
+        display: none;
+    }
 }
